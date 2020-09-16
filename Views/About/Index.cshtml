@@ -1,0 +1,31 @@
+﻿@using TripTravel.Models.Classes;
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | About :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>About</h3>
+                <img src="~/web/images/about_banner.jpg" alt="" />
+                @foreach (var x in Model)
+                {
+                    <p>@x.Aciklama</p>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
